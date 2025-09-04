@@ -14,7 +14,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import ConfusionMatrixDisplay
 import io, base64
-from IPython.display import HTML
 
 class ZCMLP(MLPClassifier):
     def __init__(self, activation: str, batch_size: int, epochs: int, hidden_layer_sizes: tuple, solver: str, tol: float, lr: float, verbose: bool, random_state: int):
@@ -43,7 +42,7 @@ class ZCMLP(MLPClassifier):
         for epoch in pbar:
             for b in range(self.batch_size, len(self.y_train), self.batch_size):
                 x_batch, y_batch = self.x_train[b - self.batch_size:b], self.y_train[b - self.batch_size:b]
-                self.partial_fit(x_batch, y_batch, classes=self.classes)
+                self.partial_fit(x_batch, y_batch, classes = self.classes)
                 self._train_loss.append(self.loss_)
                 val_loss = log_loss(self.y_val, self.predict_proba(self.x_val), labels = self.classes)
                 self._val_loss.append(val_loss)
@@ -167,3 +166,12 @@ model.evaluation()
 
 # Save The Model Using Pickle
 model.save(cwd)
+
+# Classes: 
+# 1 --> Mammal
+# 2 --> Bird
+# 3 --> Reptile
+# 4 --> Fish
+# 5 --> Amphibian
+# 6 --> Bug
+# 7 --> Invertebrate

@@ -16,8 +16,7 @@ This project is a Jupyter Notebook for classifying zoo animals using a custom Mu
 │   ├── zoo2.csv
 │   └── zoo3.csv
 ├── requirements.txt
-├── zcmlp.py
-└── zoo.ipynb
+└── zcmlp.py
 ```
 
 ## Features
@@ -37,9 +36,8 @@ pip install -r requirements.txt
 2. **Download datasets**  
 Place the CSV files from the Kaggle datasets above into the [`data`](data) directory as `zoo1.csv`, `zoo2.csv`, and `zoo3.csv`.
 
-3. **Run the notebook**  
-Open [`zoo.ipynb`](zoo.ipynb) in Jupyter or VS Code and execute the cells.
-
+3. **Run the script**  
+Open [`zcmlp.py`](zcmlp.py) in VS Code and execute the program.
 4. **Model Output**  
 - Training visualizations and evaluation metrics are displayed in the notebook.
 - Trained models and metrics are saved in the [`models`](models) directory.
@@ -55,4 +53,4 @@ The notebook uses a custom neural network class [`ZCMLP`](zcmlp.py) for training
 
 ---
 
-For more details, see [`zoo.ipynb`](zoo.ipynb) and [`zcmlp.py`](zcmlp.py).
+For more details, see [`zcmlp.py`](zcmlp.py).
